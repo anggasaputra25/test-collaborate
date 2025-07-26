@@ -1,3 +1,4 @@
+<img src="screenshot.jpg" alt="Studia Image" style="width: 100%;" />
 # 📚 Studia
 
 Studia adalah platform pembelajaran berbasis web yang dirancang untuk membantu mahasiswa dalam memahami materi kuliah secara lebih efektif. Dengan menggunakan teknologi terkini seperti **Next.js**, **Tailwind CSS**, **Supabase**, dan **Gemini AI**, Studia menyederhanakan materi, menyediakan kuis otomatis, dan menghadirkan diskusi interaktif dengan AI.
@@ -5,11 +6,13 @@ Studia adalah platform pembelajaran berbasis web yang dirancang untuk membantu m
 ## 🚀 Fitur Utama
 
 1. **Simplify Materi**
+
    - Dosen dapat mengunggah materi pembelajaran.
    - Mahasiswa dapat menyederhanakan materi tersebut dengan bantuan AI Gemini.
    - Mahasiswa juga dapat mengunggah file mandiri untuk disederhanakan.
 
 2. **Generate Quiz dengan AI**
+
    - AI Gemini menghasilkan pertanyaan kuis dari materi unggahan.
    - Mahasiswa juga dapat mengunggah file mandiri untuk menghasilkan kuis personal.
 
@@ -47,24 +50,29 @@ studia/
 ## 🎓 Arsitektur Studia
 
 1. 🔐 Authentication
+
    - Login menggunakan Supabase Auth (email/password) & google
 
 2. 📚 Materi Pembelajaran
+
    - Dosen meng-upload materi (PDF) ke Supabase Storage
    - Data metadata materi disimpan di Supabase Database (tabel `materials`)
 
 3. 🧠 Simplify Materi Menggunakan AI
+
    - Mahasiswa memilih file yang sudah ada, ataupun mengunggah file mandiri
    - Mahasiswa klik tombol "Mulai"
    - Materi dikirim ke Google Gemini untuk disederhanakan
    - Hasil disimpan ke tabel `simplify_materials`
 
 4. ❓ Quiz Generator
+
    - AI Gemini menghasilkan kuis berbasis materi yang di-upload
    - Format: Multiple Choice
    - Dapat berasal dari materi dosen atau upload mandiri mahasiswa
 
 5. 💬 Diskusi AI
+
    - Chatbot berbasis Gemini AI dengan konteks materi yang diberikan
    - Mendukung upload file mandiri dan tanya jawab
 
@@ -75,12 +83,14 @@ studia/
 ## 📦 Database Struktur (Supabase)
 
 📄 **users**
+
 - `id`
 - `name`
 - `role`
 - `created_at`
 
 📄 **courses**
+
 - `id`
 - `name`
 - `program`
@@ -92,12 +102,14 @@ studia/
 - `created_at`
 
 📄 **materials**
+
 - `id`
 - `name`
 - `course_id` (FK → courses)
 - `created_at`
 
 📄 **material_files**
+
 - `id`
 - `material_id` (FK → materials)
 - `file_name`
@@ -106,6 +118,7 @@ studia/
 - `created_at`
 
 📄 **simplify_materials**
+
 - `id`
 - `material_id` (FK → materials)
 - `student_id` (FK → users)
@@ -114,6 +127,7 @@ studia/
 - `created_at`
 
 📄 **quiz**
+
 - `id`
 - `course_id` (FK → courses)
 - `student_id` (FK → users)
@@ -125,6 +139,7 @@ studia/
 - `created_at`
 
 📄 **quiz_questions**
+
 - `id`
 - `quiz_id` (FK → quiz)
 - `number`
@@ -134,6 +149,7 @@ studia/
 - `created_at`
 
 📄 **quiz_answer**
+
 - `id`
 - `qq_id` (FK → quiz_questions)
 - `student_id` (FK → users)
@@ -143,6 +159,7 @@ studia/
 - `created_at`
 
 📄 **quiz_result**
+
 - `id`
 - `quiz_id` (FK → quiz)
 - `student_id` (FK → users)
@@ -150,6 +167,7 @@ studia/
 - `created_at`
 
 📄 **discussion**
+
 - `id`
 - `course_id` (FK → courses)
 - `student_id` (FK → users)
@@ -158,12 +176,14 @@ studia/
 - `created_at`
 
 📄 **discussion_files**
+
 - `id`
 - `discussion_id` (FK → discussion)
 - `mf_id` (FK → material_files)
 - `created_at`
 
 📄 **additional_discussion_files**
+
 - `id`
 - `discussion_id` (FK → discussion)
 - `file_name`
@@ -173,7 +193,7 @@ studia/
 
 ## 📌 Cara Menjalankan
 
-``` bash
+```bash
 # Install dependencies
 npm install
 
@@ -190,10 +210,12 @@ GEMINI_API_KEY=AIzaSyBGpO4EWgga1Nij3xDed0kKsfK6MFBD3rY
 ```
 
 ## 🤝 Kontributor
+
 - I Putu Adi Saputra
 - I Ketut Danar Cahyadi
 - I Ketut Angga Saputra
 - I Komang Gede Sutrisna
 
 ## 📜 Lisensi
-MIT License © 2025 Studia Team
+
+All rights reserved. © 2025 Studia Team.
