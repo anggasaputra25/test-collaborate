@@ -1,4 +1,5 @@
 <img src="screenshot.jpg" alt="Studia Image" style="width: 100%;" />
+
 # 📚 Studia
 
 Studia adalah platform pembelajaran berbasis web yang dirancang untuk membantu mahasiswa dalam memahami materi kuliah secara lebih efektif. Dengan menggunakan teknologi terkini seperti **Next.js**, **Tailwind CSS**, **Supabase**, dan **Gemini AI**, Studia menyederhanakan materi, menyediakan kuis otomatis, dan menghadirkan diskusi interaktif dengan AI.
