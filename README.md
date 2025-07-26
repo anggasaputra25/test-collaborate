@@ -212,8 +212,8 @@ GEMINI_API_KEY=AIzaSyBGpO4EWgga1Nij3xDed0kKsfK6MFBD3rY
 
 ## 🤝 Kontributor
 
-- I Putu Adi Saputra
 - I Ketut Danar Cahyadi
+- I Putu Adi Saputra
 - I Ketut Angga Saputra
 - I Komang Gede Sutrisna
 
